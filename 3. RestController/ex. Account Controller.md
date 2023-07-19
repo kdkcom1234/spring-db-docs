@@ -41,3 +41,11 @@
 - PUT /accounts/1/balance/decrease
 
 8. 계좌를 현재 계좌목록에서 삭제하고, 삭제된 목록에 추가하는 기능
+
+- DELETE /accounts/1
+
+9. 계좌간 금액을 전송하는 기능(transfer)
+
+- 설명: 보내려는 계좌의 잔고를 보내는 금액만큼 감소시키고, 받는 계좌의 잔고를 받는 금액만큼 증가시킨다.
+
+- PUT /accounts/1/transfer/2
