@@ -9,6 +9,7 @@
 - ano: String, 계좌번호(10자리고정, not nullable)
 - name: String, 계좌주이름(최대 20자리, not nullable)
 - balance: long, 잔액(초기값 0)
+- createdTime: long, 생성시간(unique epoch time)
 
 2. Account Controller
 
@@ -20,6 +21,8 @@
 2. 전체 계좌 목록 조회 기능
 
 - JSON형태로 전체 계좌목록을 응답 처리한다.
+- 생성시간 기준으로 역정렬
+  - Collections.sort(accounts, (a, b) -> b.getCreatedTime() - a.getCreatedTime());
 
 3. 잔액 기준으로 검색할 수 있는 기능
 
